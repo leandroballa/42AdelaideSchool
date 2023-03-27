@@ -12,7 +12,7 @@ $(TARGET): $(TARGET).c
   $(CC) $(CFLAGS) -o $(TARGET) $(TARGET).c
 
 clean:
-  $(RM) $(TARGET)
+  rm -f *.o
 
 fclean: clean
   rm -f $(NAME)
