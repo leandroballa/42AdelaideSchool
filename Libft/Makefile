@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: lballa <marvin@42.fr>                      +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2023/03/29 14:25:44 by lballa            #+#    #+#              #
+#    Updated: 2023/03/29 14:26:02 by lballa           ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 # -*- Makefile -*-
 
 NAME = libft.a
@@ -19,24 +31,24 @@ fclean: clean
 
 re: fclean all
 
-isalpha
-isdigit
-isalnum
-isascii
-isprint
-strlen
-memset
-bzero
-memcpy
-memmove
-strlcpy
-strlcat
-toupper
-tolower
-strchr
-strrchr
-strncmp
-memchr
-memcmp
-strnstr
-atoi
+#isalpha
+#isdigit
+#isalnum
+#isascii
+#isprint
+#*strlen*
+#memset
+#bzero
+#memcpy
+#memmove
+#strlcpy
+#*strlcat*
+#toupper
+#tolower
+#strchr
+#strrchr
+#*strncmp*
+#memchr
+#memcmp
+#strnstr
+#*atoi*
