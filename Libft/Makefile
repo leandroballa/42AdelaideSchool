@@ -9,12 +9,34 @@ TARGER = libft
 all: $(TARGET)
 
 $(TARGET): $(TARGET).c
-  $(CC) $(CFLAGS) -o $(TARGET) $(TARGET).c
+	$(CC) $(CFLAGS) -o $(TARGET) $(TARGET).c
 
 clean:
-  rm -f *.o
+	rm -f *.o
 
 fclean: clean
-  rm -f $(NAME)
+ 	rm -f $(NAME)
 
 re: fclean all
+
+isalpha
+isdigit
+isalnum
+isascii
+isprint
+strlen
+memset
+bzero
+memcpy
+memmove
+strlcpy
+strlcat
+toupper
+tolower
+strchr
+strrchr
+strncmp
+memchr
+memcmp
+strnstr
+atoi
