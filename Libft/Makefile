@@ -6,7 +6,7 @@
 #    By: lballa <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/29 14:25:44 by lballa            #+#    #+#              #
-#    Updated: 2023/03/29 14:55:58 by lballa           ###   ########.fr        #
+#    Updated: 2023/03/29 15:06:58 by lballa           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,7 @@ re: fclean all
 /*
 #isalpha
 #iasdigit
-isalnum
+#isalnum
 isascii
 isprint
 #strlen

@@ -1,20 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lballa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/29 14:34:37 by lballa            #+#    #+#             */
-/*   Updated: 2023/03/29 15:07:49 by lballa           ###   ########.fr       */
+/*   Created: 2023/03/29 15:00:34 by lballa            #+#    #+#             */
+/*   Updated: 2023/03/29 15:07:36 by lballa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int ar)
+int	ft_isalnum(int arg)
 {
-	if (ar >= 65 && ar <= 90)
+	if (arg >= 48 && arg <= 57)
 		return (1);
-	else if (ar >= 97 && ar <= 122)
+	else if (arg >= 65 && arg <= 90)
+		return (1);
+	else if (arg >= 97 && arg <= 122)
 		return (1);
 	else
 		return (0);
@@ -25,7 +27,7 @@ int main(void)
 {
 	char c;
 
-	c = '-';
-	printf("Return %d", ft_isalpha(c));
+	c = '=';
+	printf("Return %d", ft_isalnum(c));
 }
 */
