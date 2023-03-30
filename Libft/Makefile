@@ -13,44 +13,42 @@
 # -*- Makefile -*-
 
 NAME = libft.a
+TARGER = libft
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
-
-TARGER = libft
+FILES = isalpha.c \
+		iasdigit.c \
+		isalnum.c \
+		isascii.c \
+		isprint.c \
+		strlen.c \
+		memset.c \
+		bzero.c \
+		memcpy.c \
+		memmove.c \
+		strlcpy.c \
+		strlcat.c \
+		toupper.c \
+		tolower.c \
+		strchr.c \
+		strrchr.c \
+		strncmp.c \
+		memchr.c \
+		memcmp.c \
+		strnstr.c \
+		atoi.c \
+		
 
 all: $(TARGET)
 
 $(TARGET): $(TARGET).c
-	$(CC) $(CFLAGS) -o $(TARGET) $(TARGET).c
+	$(CC) $(CFLAGS) -o $(TARGET) $(FILES)
 
 clean:
+	rm -f $(TARGET)
 	rm -f *.o
 
 fclean: clean
  	rm -f $(NAME)
 
 re: fclean all
-
-/*
-#isalpha
-#iasdigit
-#isalnum
-isascii
-isprint
-#strlen
-memset
-bzero
-memcpy
-memmove
-strlcpy
-#strlcat
-toupper
-tolower
-strchr
-strrchr
-#strncmp
-memchr
-memcmp
-strnstr
-#atoi
-*/
