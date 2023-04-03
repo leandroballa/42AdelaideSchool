@@ -18,10 +18,10 @@ CFLAGS = -Wall -Wextra -Werror
 FILES = ft_isalpha.c \
 		ft_isdigit.c
 
-all: $(NAME)
-
 $(NAME):
 	$(CC) $(CFLAGS) -c $(FILES)
+
+all: $(NAME)
 
 clean:
 	rm -f libft
@@ -31,3 +31,5 @@ fclean: clean
 	rm -f libft.a
 	
 re: fclean all
+
+.PHONY: all, clean, fclean, re
