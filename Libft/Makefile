@@ -17,9 +17,11 @@ CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 FILES = ft_isalpha.c \
 		ft_isdigit.c
+OFILES	= $(files:%=%.o)
 
 $(NAME):
 	$(CC) $(CFLAGS) -c $(FILES)
+	ar -rc $(NAME) $(OFILES)
 
 all: $(NAME)
 
