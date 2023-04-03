@@ -6,7 +6,7 @@
 /*   By: lballa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 14:34:37 by lballa            #+#    #+#             */
-/*   Updated: 2023/03/29 15:07:49 by lballa           ###   ########.fr       */
+/*   Updated: 2023/04/03 12:25:41 by lballa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,13 @@ int	ft_isalpha(int ar)
 }
 /*
 #include <stdio.h>
+#include <ctype.h>
 int main(void)
 {
 	char c;
 
 	c = '-';
-	printf("Return %d", ft_isalpha(c));
+	printf("Return %d\n", ft_isalpha(c));
+	printf("Original %d", isalpha(c));
 }
 */

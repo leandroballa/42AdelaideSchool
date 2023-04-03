@@ -1,15 +1,36 @@
-/*
-The C library function void *memset(void *str, int c, size_t n) copies the character c (an unsigned char) to the first n characters of the string pointed to, by the argument str.
-*/
-void	*ft_memset(void *str, int c, size_t len)
-{
-	char	*p;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lballa <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/03/29 15:57:46 by lballa            #+#    #+#             */
+/*   Updated: 2023/04/03 10:32:53 by lballa           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-	p = (char *)str;
-	while (len > 0)
+void	*memset(void *str, int c, int n)
+{
+	int	i;
+
+	i = 0;
+	while (i <= n -1)
 	{
-		p[len - 1] = c;
-		len--;
+		&str[i] = c;
+		i++;
 	}
-	return (str);
 }
+/*
+#include <stdio.h>
+#include <string.h>
+int	main(void)
+{
+	char	t[10];
+
+	t = "1234567890";
+	strcpy(t,"1234567890");
+	memset(t, '-', 2);
+	printf("Ret %s", t);
+}
+*/

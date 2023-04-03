@@ -6,11 +6,11 @@
 /*   By: lballa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 15:14:14 by lballa            #+#    #+#             */
-/*   Updated: 2023/03/29 15:19:58 by lballa           ###   ########.fr       */
+/*   Updated: 2023/04/03 10:42:38 by lballa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isascii(int arg)
+int	ft_isascii(int arg)
 {
 	if (arg >= 0 && arg <= 127)
 		return (1);

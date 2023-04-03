@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lballa <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/04/03 10:25:23 by lballa            #+#    #+#             */
+/*   Updated: 2023/04/03 10:25:31 by lballa           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 /*
 The bzero() function erases the data in the n bytes of the memory
        starting at the location pointed to by s, by writing zeros (bytes

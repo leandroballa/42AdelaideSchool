@@ -6,17 +6,21 @@
 /*   By: lballa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 14:29:11 by lballa            #+#    #+#             */
-/*   Updated: 2023/03/29 15:08:51 by lballa           ###   ########.fr       */
+/*   Updated: 2023/04/03 12:15:30 by lballa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
-#define LIBFT_H
-#include <stdlib.h>
-#include <unistd.h>
+# define LIBF_H
 
+# include <stdlib.h>
+# include <unistd.h>
+
+int	ft_isalpha(int i);
+int	ft_isdigit(int i);
+/*
 int		ft_atoi(const char *str);
-#void	ft_bzero(void *s, size_t n);
+void	ft_bzero(void *s, size_t n);
 #void	*ft_calloc(size_t count, size_t size);
 int		ft_isalnum(int i);
 int		ft_isalpha(int i);
@@ -49,3 +53,6 @@ int		ft_toupper(int i);
 #void	ft_putstr_fd(char *s, int fd);
 #void	ft_putendl_fd(char *s, int fd);
 #void	ft_putnbr_fd(int n, int fd);
+*/
+
+#endif
