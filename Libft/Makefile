@@ -15,13 +15,14 @@
 NAME = libft.a
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
-FILES = ft_isalpha.c \
-        ft_isdigit.c
-OFILES  = $(files:%=%.o)
+FILES = ft_isalpha \
+        ft_isdigit
+CFILES = $(FILES:%=%.c)
+OFILES  = $(FILES:%=%.o)
 
 $(NAME):
-    $(CC) $(CFLAGS) -c $(FILES)
-    ar -rc $(NAME) ft_isalpha.o ft_isdigit.o
+    $(CC) $(CFLAGS) -c $(CFILES)
+    ar -rc $(NAME) $(OFILES)
 
 all: $(NAME)
 
