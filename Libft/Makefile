@@ -16,22 +16,22 @@ NAME = libft.a
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 FILES = ft_isalpha.c \
-		ft_isdigit.c
-OFILES	= $(files:%=%.o)
+        ft_isdigit.c
+OFILES  = $(files:%=%.o)
 
 $(NAME):
-	$(CC) $(CFLAGS) -c $(FILES)
-	ar -rc $(NAME) $(OFILES)
+    $(CC) $(CFLAGS) -c $(FILES)
+    ar -rc $(NAME) ft_isalpha.o ft_isdigit.o
 
 all: $(NAME)
 
 clean:
-	rm -f libft
-	rm -f *.o
+    rm -f libft
+    rm -f *.o
 
 fclean: clean
-	rm -f libft.a
-	
+    rm -f libft.a
+
 re: fclean all
 
 .PHONY: all, clean, fclean, re
