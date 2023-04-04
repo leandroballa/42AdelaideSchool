@@ -6,11 +6,13 @@
 /*   By: lballa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 14:16:36 by lballa            #+#    #+#             */
-/*   Updated: 2023/03/29 14:16:49 by lballa           ###   ########.fr       */
+/*   Updated: 2023/04/04 16:13:09 by lballa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(char *str)
+#include "libft.h"
+
+int	ft_atoi(const char *str)
 {
 	int		i;
 	int		mult;
@@ -37,12 +39,3 @@ int	ft_atoi(char *str)
 	nb *= mult;
 	return (nb);
 }
-/*
-#include <stdio.h>
-int	main(void)
-{
-	int	a;
-	a = ft_atoi(" ---+--+1234ab567");
-	printf("%d\n", a);
-}
-*/
