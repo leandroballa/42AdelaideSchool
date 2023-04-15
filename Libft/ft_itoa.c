@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lballa <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/04/15 16:11:02 by lballa            #+#    #+#             */
+/*   Updated: 2023/04/15 16:51:52 by lballa           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 /*
 Function name:
     ft_itoa
@@ -19,7 +31,7 @@ Description:
 static unsigned int	ft_number_size(int number)
 {
 	unsigned int	length;
-	
+
 	length = 0;
 	if (number == 0)
 		return (1);
@@ -35,7 +47,7 @@ static unsigned int	ft_number_size(int number)
 
 char	*ft_itoa(int n)
 {
-	char		*string;
+	char			*string;
 	unsigned int	number;
 	unsigned int	length;
 
@@ -43,7 +55,7 @@ char	*ft_itoa(int n)
 	string = (char *)malloc(sizeof(char) * (length + 1));
 	if (string == NULL)
 		return (NULL);
-	if (number < 0)
+	if (n < 0)
 	{
 		string[0] = '-';
 		number = -n;
