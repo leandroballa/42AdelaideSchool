@@ -6,13 +6,20 @@
 /*   By: lballa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 10:31:15 by lballa            #+#    #+#             */
-/*   Updated: 2023/04/04 15:26:51 by lballa           ###   ########.fr       */
+/*   Updated: 2023/04/17 14:27:48 by lballa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-	The C library function void *memcpy(void *dest, const void *src, size_t n)
-	copies n characters from memory area src to memory area dest.
+SYNOPSIS
+     void *
+     memcpy(void *restrict dst, const void *restrict src, size_t n);
+DESCRIPTION
+     The memcpy() function copies n bytes from memory area src to memory area 
+	 dst.  If dst and src overlap, behavior is undefined.  Applications in which
+     dst and src might overlap should use memmove(3) instead.
+RETURN VALUES
+     The memcpy() function returns the original value of dst.
 */
 
 #include "libft.h"

@@ -6,10 +6,24 @@
 /*   By: lballa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 14:20:15 by lballa            #+#    #+#             */
-/*   Updated: 2023/03/29 14:20:26 by lballa           ###   ########.fr       */
+/*   Updated: 2023/04/17 14:14:26 by lballa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+/*
+SYNOPSIS
+     char *
+     strncat(char *restrict s1, const char *restrict s2, size_t n);
+DESCRIPTION
+     The strcat() and strncat() functions append a copy of the null-terminated 
+	 string s2 to the end of the null-terminated string s1, then add a terminat-
+     ing `\0'.  The string s1 must have sufficient space to hold the result.
+     The strncat() function appends not more than n characters from s2, and then
+	 adds a terminating `\0'.
+     The source and destination strings should not overlap, as the behavior is 
+	 undefined.
+RETURN VALUES
+     The strcat() and strncat() functions return the pointer s1.
+*/
 unsigned	int	ft_strlen(char *str)
 {
 	unsigned int	i;

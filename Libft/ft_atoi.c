@@ -6,10 +6,19 @@
 /*   By: lballa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 14:16:36 by lballa            #+#    #+#             */
-/*   Updated: 2023/04/15 16:16:06 by lballa           ###   ########.fr       */
+/*   Updated: 2023/04/17 14:41:25 by lballa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+/*
+SYNOPSIS
+     int
+     atoi(const char *str);
+DESCRIPTION
+     The atoi() function converts the initial portion of the string pointed to 
+	 by str to int representation.
+     It is equivalent to:
+           (int)strtol(str, (char **)NULL, 10);
+*/
 #include "libft.h"
 
 int	ft_atoi(const char *str)
