@@ -6,7 +6,7 @@
 /*   By: lballa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/15 16:11:47 by lballa            #+#    #+#             */
-/*   Updated: 2023/04/17 14:44:05 by lballa           ###   ########.fr       */
+/*   Updated: 2023/04/17 15:17:55 by lballa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /*
@@ -28,15 +28,24 @@ RETURN VALUES
 	 aligned_alloc() functions return a pointer to allocated memory.  If there 
 	 is an error, they return a NULL pointer and set errno to ENOMEM.
 */
+
 #include "libft.h"
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	void	*ptr;
+	size_t	total;
+	char	*mem;
+	size_t	i;
 
-	ptr = (void *)malloc(count * size);
-	if (!ptr)
+	total = count * size;
+	mem = malloc(total);
+	if (mem == NULL)
 		return (NULL);
-	ft_bzero(ptr, count);
-	return (ptr);
+	i = 0;
+	while (i < total)
+	{
+		mem[i] = 0;
+		i++;
+	}
+	return (mem);
 }
