@@ -6,7 +6,7 @@
 /*   By: lballa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 10:37:34 by lballa            #+#    #+#             */
-/*   Updated: 2023/04/17 14:37:12 by lballa           ###   ########.fr       */
+/*   Updated: 2023/04/17 14:53:09 by lballa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /*
@@ -15,13 +15,15 @@ SYNOPSIS
      strrchr(const char *s, int c);
 
 DESCRIPTION
-     The strchr() function locates the first occurrence of c (converted to a char) in the string pointed to by s.  The terminating null character is con-
-     sidered to be part of the string; therefore if c is `\0', the functions locate the terminating `\0'.
-
-     The strrchr() function is identical to strchr(), except it locates the last occurrence of c.
-
+     The strchr() function locates the first occurrence of c (converted to a 
+	 char) in the string pointed to by s.  The terminating null character is 
+	 considered to be part of the string; therefore if c is `\0', the functions 
+	 locate the terminating `\0'.
+     The strrchr() function is identical to strchr(), except it locates the last
+	 occurrence of c.
 RETURN VALUES
-     The functions strchr() and strrchr() return a pointer to the located character, or NULL if the character does not appear in the string.
+     The functions strchr() and strrchr() return a pointer to the located 
+	 character, or NULL if the character does not appear in the string.
 */
 #include "libft.h"
 
