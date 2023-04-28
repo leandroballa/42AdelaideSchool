@@ -6,7 +6,7 @@
 /*   By: lballa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/15 16:02:31 by lballa            #+#    #+#             */
-/*   Updated: 2023/04/17 15:20:25 by lballa           ###   ########.fr       */
+/*   Updated: 2023/04/27 16:49:26 by lballa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,51 +34,26 @@ Description:
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t	i;
-	size_t	j;
 	char	*str;
-
-	str = (char *)malloc(sizeof(*s) * (len + 1));
-	if (!str)
-		return (NULL);
-	i = 0;
-	j = 0;
-	while (s[i])
-	{
-		if (i >= start && j < len)
-		{
-			str[j] = s[i];
-			j++;
-		}
-		i++;
-	}
-	str[j] = 0;
-	return (str);
-}
-/*char	*ft_substr(const char *s, unsigned int start, size_t len)
-{
-	char	*dst;
 	size_t	i;
+	size_t	l;
 
-	if (s == NULL)
-		return (NULL);
-	if (ft_strlen(s) < start)
+	l = ft_strlen(s);
+	if (start > l)
+		return (ft_strdup(""));
+	if (l == '0')
 	{
-		if ((dst = malloc(sizeof(char))) == NULL)
-			return (NULL);
-		dst[0] = '\0';
-		return (dst);
+		return (ft_strdup(""));
 	}
 	else
 	{
-		if (start + len > ft_strlen(s))
-			len = ft_strlen(s) - start;
-		if ((dst = malloc(sizeof(char) * (len + 1))) == NULL)
-			return (NULL);
+		str = malloc(sizeof(char) * (len + 1));
+		if (str == NULL)
+			return (0);
 		i = 0;
 		while (++i - 1 < len)
-			*(dst + i - 1) = *(s + start + i - 1);
-		*(dst + i - 1) = '\0';
-		return (dst);
+			*(str + i - 1) = *(s + start + i - 1);
+		*(str + i - 1) = '\0';
+		return (str);
 	}
-}*/
+}

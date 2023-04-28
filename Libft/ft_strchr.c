@@ -6,7 +6,7 @@
 /*   By: lballa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 10:33:24 by lballa            #+#    #+#             */
-/*   Updated: 2023/04/17 15:05:48 by lballa           ###   ########.fr       */
+/*   Updated: 2023/04/18 14:11:11 by lballa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,16 @@ RETURN VALUES
 
 char	*ft_strchr(const char *s, int i)
 {
+	unsigned char	c;
+
+	c = (unsigned char)i;
 	while (*s)
 	{
-		if (*s == i)
+		if (*s == c)
 			return ((char *)s);
 		s++;
 	}
-	if (i == '\0')
+	if (c == '\0')
 		return ((char *)s);
 	return (0);
 }
