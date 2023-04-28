@@ -6,7 +6,7 @@
 /*   By: lballa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 10:31:40 by lballa            #+#    #+#             */
-/*   Updated: 2023/04/17 14:25:37 by lballa           ###   ########.fr       */
+/*   Updated: 2023/04/28 15:55:55 by lballa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /*
@@ -26,6 +26,8 @@ void	*ft_memmove(void *s1, const void *s2, size_t n)
 {
 	size_t	len;
 
+	if (!s1 && !s2)
+		return (NULL);
 	len = 0;
 	if (s2 < s1)
 	{

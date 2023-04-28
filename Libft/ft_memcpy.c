@@ -6,7 +6,7 @@
 /*   By: lballa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 10:31:15 by lballa            #+#    #+#             */
-/*   Updated: 2023/04/17 14:27:48 by lballa           ###   ########.fr       */
+/*   Updated: 2023/04/28 15:53:10 by lballa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,19 +24,21 @@ RETURN VALUES
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	size_t	i;
 	char	*d;
 	char	*s;
 
 	i = 0;
-	d = (char *)dest;
+	d = (char *)dst;
 	s = (char *)src;
+	if (!dst && !src)
+		return (NULL);
 	while (i < n)
 	{
 		d[i] = s[i];
 		i++;
 	}
-	return (dest);
+	return (dst);
 }

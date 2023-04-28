@@ -5,130 +5,76 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lballa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/15 16:08:39 by lballa            #+#    #+#             */
-/*   Updated: 2023/04/17 14:39:28 by lballa           ###   ########.fr       */
+/*   Created: 2023/04/28 15:44:08 by lballa            #+#    #+#             */
+/*   Updated: 2023/04/28 15:44:16 by lballa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-Function name:
-    ft_split
-Prototype:
-    char **ft_split(char const *s, char c);
-Parameters:
-    s: The string to be split.
-    c: The delimiter character.
-Return value:
-    The array of new strings resulting from the split.
-    NULL if the allocation fails.
-External functs:
-     malloc, free
-Description:
-    Allocates (with malloc(3)) and returns an array
-    of strings obtained by splitting ’s’ using the
-    character ’c’ as a delimiter. The array must end
-    with a NULL pointer.
-*/
 #include "libft.h"
 
-static void	ft_freeup(char *strs)
+static size_t	count_word(const char *str, char c)
 {
-	int	i;
+	size_t	count;
+	size_t	flag;
 
-	i = 0;
-	while (strs[i] != '\0')
+	count = 0;
+	flag = 0;
+	while (*str)
 	{
-		free(strs);
-		i++;
-	}
-	free(strs);
-}
-
-static int	ft_wordcount(char *str, char c)
-{
-	int	i;
-	int	word;
-
-	i = 0;
-	word = 0;
-	while (str[i] != '\0')
-	{
-		if (str[i] != c)
+		if (*str != c && flag == 0)
 		{
-			word++;
-			while (str[i] != c && str[i] != '\0')
-				i++;
-			if (str[i] == '\0')
-				return (word);
+			flag = 1;
+			count++;
 		}
-		i++;
+		else if (*str == c)
+			flag = 0;
+		str++;
 	}
-	return (word);
+	return (count);
 }
 
-static void	ft_strcpy(char *word, char *str, char c, int j)
+static char	*ft_strndup(const char *s1, size_t n)
 {
-	int	i;
+	char	*str;
+	size_t	i;
 
 	i = 0;
-	while (str[j] != '\0' && str[j] == c)
-		j++;
-	while (str[j + i] != c && str[j + i] != '\0')
+	str = malloc(n + 1);
+	if (!str)
+		return (0);
+	while (s1[i] && (i < n))
 	{
-		word[i] = str[j + i];
+		str[i] = s1[i];
 		i++;
 	}
-	word[i] = '\0';
+	while (i <= n)
+		str[i++] = 0;
+	return (str);
 }
 
-static char	*ft_stralloc(char *str, char c, int *k)
+char	**ft_split(char const *s, char c)
 {
-	char	*word;
-	int		j;
+	char	**split;
+	size_t	i;
+	size_t	j;
+	size_t	k;
 
-	j = *k;
-	word = NULL;
-	while (str[*k] != '\0')
-	{
-		if (str[*k] != c)
-		{
-			while (str[*k] != '\0' && str[*k] != c)
-				*k += 1;
-			word = (char *)malloc(sizeof(char) * (*k + 1));
-			if (word == NULL)
-				return (NULL);
-			break ;
-		}
-		*k += 1;
-	}
-	ft_strcpy(word, str, c, j);
-	return (word);
-}
-
-char	**ft_split(char const *str, char c)
-{
-	char	**strs;
-	int		i;
-	int		j;
-	int		pos;
-
-	if (str == NULL)
-		return (NULL);
+	k = count_word(s, c);
+	split = malloc(sizeof(char *) * (k + 1));
+	if (!split || !s)
+		return (0);
 	i = 0;
-	pos = 0;
-	j = ft_wordcount((char *)str, c);
-	strs = (char **)malloc(sizeof(char *) * (j + 1));
-	if (strs == NULL)
-		return (NULL);
-	strs[j] = NULL;
-	while (i < j)
+	j = 0;
+	while (j < k)
 	{
-		strs[i] = ft_stralloc(((char *)str), c, &pos);
-		if (strs[i] == NULL)
-		{
-			ft_freeup(strs[i]);
-		}
-		i++;
+		while (s[i] == c)
+			i++;
+		s = &s[i];
+		i = 0;
+		while (s[i] != c && s[i])
+			i++;
+		split[j++] = ft_strndup(s, i);
 	}
-	return (strs);
+	split[j] = 0;
+	return (split);
 }

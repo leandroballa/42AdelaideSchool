@@ -6,7 +6,7 @@
 /*   By: lballa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/15 16:02:31 by lballa            #+#    #+#             */
-/*   Updated: 2023/04/27 16:49:26 by lballa           ###   ########.fr       */
+/*   Updated: 2023/04/28 15:30:33 by lballa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,13 +41,15 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	l = ft_strlen(s);
 	if (start > l)
 		return (ft_strdup(""));
+	if (len > l - start)
+		len = l - start;
 	if (l == '0')
 	{
 		return (ft_strdup(""));
 	}
 	else
 	{
-		str = malloc(sizeof(char) * (len + 1));
+		str = malloc(sizeof(char) * ((len) + 1));
 		if (str == NULL)
 			return (0);
 		i = 0;
