@@ -31,3 +31,12 @@ Makefiles can simplify the build process and reduce the risk of errors when comp
 * -WALL -WEXTRA -WERROR
 * -c
 * ar -rc
+  
+  The ar -rc command is used to create a static library archive file (.a file) from a collection of object files. Here's a breakdown of the command syntax:
+
+    *__ar__* is the command for creating and manipulating archive files.
+  
+    *__-rc__* are options for the ar command, where:
+  
+     * *__r__* means replace or add files to the archive.
+     * *__c__* means create a new archive if it doesn't exist yet.
