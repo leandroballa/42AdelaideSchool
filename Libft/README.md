@@ -47,6 +47,7 @@ Makefiles can simplify the build process and reduce the risk of errors when comp
   
 ### -c
   The -c option in gcc is used to compile source files into object files without linking them into an executable. When you compile a C program, the compiler first translates your C source code into assembly code, and then assembles the code into an object file containing machine code and data.
+  
   The -c option instructs gcc to compile the source file and generate an object file without linking it with any other object files or libraries. This is useful when you are working on a large project with many source files and libraries, and you want to compile each source file separately and then link them together later.
   
 ### ar -rc
